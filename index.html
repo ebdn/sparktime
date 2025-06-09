@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Perfil | SparkTime</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <img src="logo.png" alt="SparkTime Logo" class="logo-img" />
+    <nav class="nav-menu">
+      <a href="home.html">Início</a>
+      <a href="quemsomos.html">Quem somos</a>
+      <a href="planos.html">Planos</a>
+      <a href="tarefas.html">Tarefas</a>
+      <a href="index.html" class="btn">Login</a>
+    </nav>
+  </header>
+
+    <section class="chamada-topo">
+
+  <!-- Área principal -->
+  <main class="main-wrapper">
+    <!-- Formulário de login -->
+    <div class="login-container">
+      <h1>Entrar no SparkTime</h1>
+      <button id="login-google">Entrar com Google</button>
+      <hr />
+      <form id="login-form">
+        <input type="email" id="email" placeholder="E-mail" required />
+        <input type="password" id="pass" placeholder="Senha" required />
+        <button type="submit">Entrar / Cadastrar</button>
+      </form>
+    </div>
+  </main>
+
+    <!-- Firebase e login -->
+  <script type="module">
+    import { loginGoogle, loginEmail, signupEmail, onUserChanged } from './app.js';
+
+    document.getElementById('login-google').addEventListener('click', () => {
+      loginGoogle().catch(err => alert(err.message));
+    });
+
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = e.target.email.value;
+      const pass = e.target.pass.value;
+      try {
+        await loginEmail(email, pass);
+      } catch (err) {
+        if (err.code === 'auth/user-not-found') {
+          await signupEmail(email, pass);
+        } else {
+          alert(err.message);
+        }
+      }
+    });
+
+    onUserChanged(user => {
+      if (user) window.location = 'tarefas.html';
+    });
+
+  <!-- Chatbot -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/684596640690ab1912a81521/1it7t6un5';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <footer class="footer-completo">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="logo.png" alt="SparkTime Logo" />
+      <p>SparkTime — preservando o seu tempo</p>
+      <div class="social-icons">
+        <img src="instagramlogo.png" alt="Instagram" />
+        <img src="tiktoklogo.png" alt="TikTok" />
+        <img src="linkedinlogo.png" alt="LinkedIn" />
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li><strong>Sobre a ST</strong></li>
+        <li><a href="#">Quem somos</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Ajuda</a></li>
+      </ul>
+      <ul>
+        <li><strong>Empresas</strong></li>
+        <li><a href="#">Colaboradores</a></li>
+        <li><a href="#">Planos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-apps">
+      <p>Baixe nosso aplicativo</p>
+      <div class="app-buttons">
+        <img src="appstorelogo.png" alt="App Store" />
+        <img src="googleplaylogo.png" alt="Google Play" />
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <a href="#">Termos de uso</a>
+    <a href="#">Aviso de Privacidade</a>
+    <a href="#">Portal de Privacidade</a>
+    <a href="#">Transparência salarial e critérios</a>
+  </div>
+</footer>
+</body>
+</html>
