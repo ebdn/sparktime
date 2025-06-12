@@ -1710,3 +1710,37 @@ body {
     color: #00d47e;
   }
 }
+/* Reduz margens laterais e verticais dos blocos principais */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 16px; /* Reduz as laterais */
+}
+
+/* Garante que os elementos internos do bloco tenham menos margem */
+.funciona-grid,
+.cards-duplos,
+.plans-container {
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Adapta ainda melhor no celular */
+@media (max-width: 768px) {
+  section {
+    padding: 16px 10px;
+  }
+
+  .funciona-grid,
+  .cards-duplos,
+  .plans-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .plan-card {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
