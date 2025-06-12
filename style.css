@@ -1669,3 +1669,44 @@ body {
 .main-header, .footer-completo {
   padding: 1rem;
 }
+/* Aumentar o texto abaixo do nome no perfil */
+.perfil-top p {
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+/* Deixar a tabela responsiva no celular */
+@media (max-width: 768px) {
+  .tabela-alimentacao table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .tabela-alimentacao table thead {
+    display: none;
+  }
+
+  .tabela-alimentacao table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    background: #fff;
+  }
+
+  .tabela-alimentacao table td {
+    display: block;
+    text-align: left;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .tabela-alimentacao table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #00d47e;
+  }
+}
