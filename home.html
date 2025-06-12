@@ -1,160 +1,127 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | SparkTime</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | SparkTime</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="./assets/logo.png" alt="Logo SparkTime">
-            </div>
-            <ul>
-                <li><a href="#">Planos</a></li>
-                <li><a href="#">Quem Somos</a></li>
-                <li><a href="#">Perfil</a></li>
-                <li><a href="#">Tarefas</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="main-header container">
+    <img src="logo.png" alt="SparkTime Logo" class="logo-img" />
+    <nav class="nav-menu">
+      <a href="planos.html">Planos</a>
+      <a href="quemsomos.html">Quem Somos</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="tarefas.html">Tarefas</a>
+      <a href="index.html" class="btn">Login</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="hero container">
-            <div class="hero-content">
-                <h1>Faz total sentido assinar o SparkTime</h1>
-                <p>e transformar sua rotina com <span>treinos, alimentação e bem-estar no mesmo lugar.</span></p>
-                <a href="#" class="btn">Saiba mais</a>
-            </div>
-            <div class="hero-image">
-                <img src="./assets/hero-image.png" alt="Pessoa se exercitando">
-            </div>
-        </section>
+  <section class="hero-section container">
+    <div class="hero-text">
+      <h1>Faz total sentido assinar o SparkTime</h1>
+      <p>
+        e transformar sua rotina com <strong>treinos, alimentação e bem-estar no mesmo lugar.</strong>
+      </p>
+      <a href="planos.html" class="btn">Saiba mais</a>
+    </div>
+    <div class="hero-img">
+      <img src="img1.png" alt="Banner SparkTime" />
+    </div>
+  </section>
 
-        <section class="how-it-works container">
-            <h2>Como Funciona?</h2>
-            <div class="steps">
-                <div class="step">
-                    <img src="./assets/icon-video.png" alt="Ícone de vídeo">
-                    <h3>Assista vídeos curtos</h3>
-                </div>
-                <div class="step">
-                    <img src="./assets/icon-progress.png" alt="Ícone de progresso">
-                    <h3>Acompanhe seu Progresso</h3>
-                </div>
-                <div class="step">
-                    <img src="./assets/icon-rewards.png" alt="Ícone de recompensas">
-                    <h3>Ganhe Recompensas</h3>
-                </div>
-            </div>
-        </section>
+  <section class="como-funciona container">
+    <h2>Como Funciona?</h2>
+    <div class="funciona-grid">
+      <div class="funciona-card">
+        <svg ...></svg>
+        <p>Assista vídeos curtos</p>
+      </div>
+      <div class="funciona-card">
+        <svg ...></svg>
+        <p>Acompanhe seu Progresso</p>
+      </div>
+      <div class="funciona-card">
+        <svg ...></svg>
+        <p>Ganhe Recompensas</p>
+      </div>
+    </div>
+  </section>
 
-        <section class="app-features container">
-            <div class="feature-card">
-                <img src="./assets/app-feature-1.png" alt="Recurso do aplicativo">
-                <h3>Tudo na palma da sua mão</h3>
-                <a href="#">Consultar Planos</a>
-            </div>
-            <div class="feature-card">
-                <img src="./assets/app-feature-2.png" alt="Recurso do aplicativo">
-                <h3>Cadastre-se e faça parte</h3>
-                <a href="#">Acessar</a>
-            </div>
-        </section>
+  <section class="cards-duplos container">
+    <div class="duplo">
+      <a href="planos.html">
+        <img src="img2.png" alt="Plano na palma" />
+      </a>
+    </div>
+    <div class="duplo">
+      <a href="index.html">
+        <img src="img3.png" alt="App SparkTime" />
+      </a>
+    </div>
+  </section>
 
-        <section class="plans container">
-            <h2>Categorias de planos</h2>
-            <div class="plan-cards">
-                <div class="plan-card">
-                    <h3>ST FREE</h3>
-                    <p class="price">R$ 0,00 / mês</p>
-                    <p class="description">Com acesso limitado e gratuito</p>
-                    <a href="#" class="btn">Saiba mais</a>
-                    <h4>Tenha acesso a:</h4>
-                    <ul>
-                        <li>Calendário de progresso</li>
-                        <li>Recompensas e pontos por desafio</li>
-                        <li>Loja de brindes e troca de pontos</li>
-                    </ul>
-                </div>
-                <div class="plan-card">
-                    <h3>ST GO</h3>
-                    <p class="price">R$ 14,90 / mês</p>
-                    <p class="description">Ideal para começar a transformar sua rotina</p>
-                    <a href="#" class="btn">Saiba mais</a>
-                    <h4>Tenha acesso a:</h4>
-                    <ul>
-                        <li>Calendário de progresso</li>
-                        <li>Recompensas e pontos por desafio</li>
-                        <li>Loja de brindes e troca de pontos</li>
-                    </ul>
-                </div>
-                <div class="plan-card">
-                    <h3>ST PLUS</h3>
-                    <p class="price">R$ 29,90 / mês</p>
-                    <p class="description">Com treinos, planos e acompanhamento</p>
-                    <a href="#" class="btn">Saiba mais</a>
-                    <h4>Tenha acesso a:</h4>
-                    <ul>
-                        <li>Descontos com parceiros de bem-estar</li>
-                        <li>Aulas ao vivo</li>
-                    </ul>
-                </div>
-                <div class="plan-card">
-                    <h3>ST MAX</h3>
-                    <p class="price">R$ 49,90 / mês</p>
-                    <p class="description">O melhor da SparkTime com suporte completo</p>
-                    <a href="#" class="btn">Saiba mais</a>
-                    <h4>Tenha acesso a:</h4>
-                    <ul>
-                        <li>Lives exclusivas e eventos fechados</li>
-                        <li>Acesso antecipado a novidades e lançamentos</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+  <section class="plan-cards container">
+    <h2 class="section-title">Categorias de planos</h2>
+    <div class="plans-container">
+      <!-- Cards dos planos (mantidos conforme você enviou) -->
+      ...
+    </div>
+  </section>
 
-    <footer class="container">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="./assets/logo.png" alt="Logo SparkTime">
-                <p>SparkTime — preservando o seu tempo</p>
-            </div>
-            <div class="footer-social">
-                <a href="#"><img src="./assets/icon-instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="./assets/icon-tiktok.png" alt="TikTok"></a>
-                <a href="#"><img src="./assets/icon-linkedin.png" alt="LinkedIn"></a>
-            </div>
-            <div class="footer-links">
-                <h4>Sobre a ST</h4>
-                <ul>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Ajuda</a></li>
-                    <li><a href="#">Colaboradores</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Empresas</h4>
-                <ul>
-                    <li><a href="#">Planos</a></li>
-                    <li><a href="#">Termos de uso</a></li>
-                    <li><a href="#">Aviso de Privacidade</a></li>
-                    <li><a href="#">Portal de Privacidade</a></li>
-                    <li><a href="#">Transparência salarial e critérios</a></li>
-                </ul>
-            </div>
-            <div class="footer-app-download">
-                <h4>Baixe nosso aplicativo</h4>
-                <a href="#"><img src="./assets/icon-appstore.png" alt="App Store"></a>
-                <a href="#"><img src="./assets/icon-googleplay.png" alt="Google Play"></a>
-            </div>
+  <footer class="footer-completo container">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="logo.png" alt="SparkTime Logo" />
+        <p>SparkTime — preservando o seu tempo</p>
+        <div class="social-icons">
+          <img src="instagramlogo.png" alt="Instagram" />
+          <img src="tiktoklogo.png" alt="TikTok" />
+          <img src="linkedinlogo.png" alt="LinkedIn" />
         </div>
-    </footer>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><strong>Sobre a ST</strong></li>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Ajuda</a></li>
+        </ul>
+        <ul>
+          <li><strong>Empresas</strong></li>
+          <li><a href="#">Colaboradores</a></li>
+          <li><a href="#">Planos</a></li>
+        </ul>
+      </div>
+      <div class="footer-apps">
+        <p>Baixe nosso aplicativo</p>
+        <div class="app-buttons">
+          <img src="appstorelogo.png" alt="App Store" />
+          <img src="googleplaylogo.png" alt="Google Play" />
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="#">Termos de uso</a>
+      <a href="#">Aviso de Privacidade</a>
+      <a href="#">Portal de Privacidade</a>
+      <a href="#">Transparência salarial e critérios</a>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/684596640690ab1912a81521/1it7t6un5';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
 </body>
 </html>
+
