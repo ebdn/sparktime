@@ -1743,4 +1743,49 @@ section {
     margin-bottom: 16px;
   }
 }
+/* Garante que o conteúdo se espalhe melhor horizontalmente em telas maiores */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #151515;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Seções com largura fluída e padding menor */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 5vw; /* Reduz lateralmente para 5% da largura da tela */
+  box-sizing: border-box;
+}
+
+/* Ajustes para blocos em grade, como cards e seções duplas */
+.funciona-grid,
+.cards-duplos,
+.plans-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Garante que os elementos ocupem a largura total no mobile */
+@media (max-width: 768px) {
+  section {
+    padding: 16px 4vw;
+  }
+
+  .funciona-grid,
+  .cards-duplos,
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card,
+  .duplo {
+    width: 100% !important;
+  }
+}
 
