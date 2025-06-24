@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Perfil | SparkTime</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="melhorias.css" />
 </head>
 <body>
   <header class="main-header">
@@ -27,155 +28,265 @@
       </div>
     </section>
 
-    <section class="tabela-alimentacao">
-      <h2>Tabela de alimentação <span>Segunda-Feira &gt;</span></h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Horário</th>
-            <th>Refeição</th>
-            <th>Alimentos</th>
-            <th>Nutrientes</th>
-            <th>Objetivo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Horário">07:00</td>
-            <td data-label="Refeição">Café da manhã</td>
-            <td data-label="Alimentos">1 fatia de pão integral, 1 ovo mexido, 1 fatia de queijo branco, 1 copo de suco natural de laranja</td>
-            <td data-label="Nutrientes">Carboidrato, proteína, cálcio, vitamina C</td>
-            <td data-label="Objetivo">Energia para começar o dia; boa digestão e disposição</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">10:00</td>
-            <td data-label="Refeição">Lanche da manhã</td>
-            <td data-label="Alimentos">1 iogurte natural com chia + 1 banana</td>
-            <td data-label="Nutrientes">Probióticos, fibras, potássio, proteína leve</td>
-            <td data-label="Objetivo">Estabiliza o nível de glicose e saciedade até o almoço</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">12:30</td>
-            <td data-label="Refeição">Almoço</td>
-            <td data-label="Alimentos">1 filé de frango grelhado, arroz integral, feijão, salada verde com azeite e limão, cenoura ralada</td>
-            <td data-label="Nutrientes">Proteínas magras, fibras, ferro, antioxidantes</td>
-            <td data-label="Objetivo">Refeição completa com boa variedade nutricional</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">15:30</td>
-            <td data-label="Refeição">Lanche da tarde</td>
-            <td data-label="Alimentos">1 maçã + 1 colher de pasta de amendoim</td>
-            <td data-label="Nutrientes">Fibras, gordura boa, energia estável</td>
-            <td data-label="Objetivo">Ótima para o foco e controle da fome</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">18:30</td>
-            <td data-label="Refeição">Pré-treino</td>
-            <td data-label="Alimentos">1 fatia de pão integral + 1 colher de cottage + 1 colher de mel</td>
-            <td data-label="Nutrientes">Carboidratos complexos, proteína leve, energia rápida</td>
-            <td data-label="Objetivo">Prepara o corpo para o exercício sem pesar</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">20:00</td>
-            <td data-label="Refeição">Pós-treino</td>
-            <td data-label="Alimentos">1 shake de proteína (whey) + 1 fruta vermelha (morango ou framboesa)</td>
-            <td data-label="Nutrientes">Proteína de rápida absorção, antioxidantes</td>
-            <td data-label="Objetivo">Recuperação muscular e reposição energética</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">21:00</td>
-            <td data-label="Refeição">Jantar</td>
-            <td data-label="Alimentos">Omelete com legumes (espinafre, tomate, cebola), salada verde</td>
-            <td data-label="Nutrientes">Proteína, ferro, fibras, baixo teor calórico</td>
-            <td data-label="Objetivo">Leve e nutritivo para o fim do dia</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">22:30</td>
-            <td data-label="Refeição">Ceia (opcional)</td>
-            <td data-label="Alimentos">Chá de camomila ou erva-doce + 2 nozes ou castanhas</td>
-            <td data-label="Nutrientes">Triptofano, magnésio, gorduras boas</td>
-            <td data-label="Objetivo">Relaxamento e preparação para o sono</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="videos-curtos">
+    <!-- Seção de Vídeos Melhorada -->
+    <section class="videos-section">
       <div class="quadro-branco">
-        <h2>Vídeos curtos</h2>
-        <div class="videos-carousel">
-          <div class="video-card">
-            <img src="img/video1.jpg" alt="Vídeo 1" />
-            <div class="play-icon"><img src="img/play.svg" alt="Play" /></div>
-          </div>
-          <div class="video-card">
-            <img src="img/video2.jpg" alt="Vídeo 2" />
-            <div class="play-icon"><img src="img/play.svg" alt="Play" /></div>
-          </div>
-          <div class="video-card">
-            <img src="img/video3.jpg" alt="Vídeo 3" />
-            <div class="play-icon"><img src="img/play.svg" alt="Play" /></div>
-          </div>
-        </div>
-        <p class="texto-verde">
-          No Sparktime, acreditamos que cuidar da saúde não precisa ser complicado nem demorado.<br />
-          Por isso, desenvolvemos vídeos curtos e objetivos que se encaixam facilmente na rotina,<br />
+        <h2>Vídeos Educativos</h2>
+        <p class="videos-intro">
+          No SparkTime, acreditamos que cuidar da saúde não precisa ser complicado nem demorado. 
+          Por isso, desenvolvemos vídeos curtos e objetivos que se encaixam facilmente na rotina, 
           mesmo nos dias mais corridos.
         </p>
-        <p class="texto-descricao">
-          Cada conteúdo foi pensado para entregar informação de qualidade, prática imediata e<br />
-          motivação real, em menos de 5 minutos. Aqui, o tempo é seu aliado — seja para se alongar,<br />
-          aprender algo novo sobre alimentação ou simplesmente respirar melhor com uma meditação guiada.
-        </p>
+        
+        <!-- Container para vídeos reais -->
+        <div class="videos-container" id="videos-container">
+          <!-- Os vídeos serão inseridos aqui via JavaScript -->
+        </div>
+        
+        <!-- Mockup da interface do app -->
+        <div class="app-mockup-section">
+          <h3>Como será no aplicativo SparkTime</h3>
+          <div class="mockup-container">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="app-header">
+                  <span class="app-title">SparkTime</span>
+                  <span class="user-greeting">Olá, Natália!</span>
+                </div>
+                <div class="video-grid-mockup">
+                  <div class="video-item-mockup">
+                    <div class="video-thumbnail"></div>
+                    <span>Alongamento Matinal</span>
+                    <span class="duration">3 min</span>
+                  </div>
+                  <div class="video-item-mockup">
+                    <div class="video-thumbnail"></div>
+                    <span>Meditação Guiada</span>
+                    <span class="duration">5 min</span>
+                  </div>
+                  <div class="video-item-mockup">
+                    <div class="video-thumbnail"></div>
+                    <span>Dicas de Alimentação</span>
+                    <span class="duration">2 min</span>
+                  </div>
+                  <div class="video-item-mockup">
+                    <div class="video-thumbnail"></div>
+                    <span>Exercícios Rápidos</span>
+                    <span class="duration">4 min</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mockup-description">
+              <h4>Interface Intuitiva</h4>
+              <p>Vídeos organizados por categoria, com duração clara e acesso rápido. A linguagem é acolhedora e motivacional, sempre respeitando seu ritmo e promovendo equilíbrio.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Tabela de Alimentação Melhorada -->
+    <section class="alimentacao-section">
+      <h2>Plano Alimentar <span class="dia-semana">Segunda-Feira</span></h2>
+      <div class="validation-field">
+        <p>Dieta elaborada pelo profissional: <span>Gabriel</span></p>
+      </div>
+      
+      <!-- Versão em cards para melhor visualização -->
+      <div class="alimentacao-cards">
+        <div class="refeicao-card">
+          <div class="horario-badge">07:00</div>
+          <div class="refeicao-content">
+            <h3>🌅 Café da manhã</h3>
+            <div class="alimentos">
+              <span class="alimento">🍞 Pão integral</span>
+              <span class="alimento">🥚 Ovo mexido</span>
+              <span class="alimento">🧀 Queijo branco</span>
+              <span class="alimento">🍊 Suco de laranja</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Carboidrato</span>
+              <span class="nutriente">Proteína</span>
+              <span class="nutriente">Cálcio</span>
+              <span class="nutriente">Vitamina C</span>
+            </div>
+            <p class="objetivo">Energia para começar o dia com disposição</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">10:00</div>
+          <div class="refeicao-content">
+            <h3>🥤 Lanche da manhã</h3>
+            <div class="alimentos">
+              <span class="alimento">🥛 Iogurte natural com chia</span>
+              <span class="alimento">🍌 Banana</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Probióticos</span>
+              <span class="nutriente">Fibras</span>
+              <span class="nutriente">Potássio</span>
+            </div>
+            <p class="objetivo">Estabiliza glicose e mantém saciedade</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">12:30</div>
+          <div class="refeicao-content">
+            <h3>🍽️ Almoço</h3>
+            <div class="alimentos">
+              <span class="alimento">🍗 Frango grelhado</span>
+              <span class="alimento">🍚 Arroz integral</span>
+              <span class="alimento">🫘 Feijão</span>
+              <span class="alimento">🥗 Salada verde</span>
+              <span class="alimento">🥕 Cenoura ralada</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Proteínas</span>
+              <span class="nutriente">Fibras</span>
+              <span class="nutriente">Ferro</span>
+              <span class="nutriente">Antioxidantes</span>
+            </div>
+            <p class="objetivo">Refeição completa com variedade nutricional</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">15:30</div>
+          <div class="refeicao-content">
+            <h3>🍎 Lanche da tarde</h3>
+            <div class="alimentos">
+              <span class="alimento">🍎 Maçã</span>
+              <span class="alimento">🥜 Pasta de amendoim</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Fibras</span>
+              <span class="nutriente">Gorduras boas</span>
+              <span class="nutriente">Energia estável</span>
+            </div>
+            <p class="objetivo">Melhora o foco e controla a fome</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">18:30</div>
+          <div class="refeicao-content">
+            <h3>💪 Pré-treino</h3>
+            <div class="alimentos">
+              <span class="alimento">🍞 Pão integral</span>
+              <span class="alimento">🧀 Cottage</span>
+              <span class="alimento">🍯 Mel</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Carboidratos</span>
+              <span class="nutriente">Proteína leve</span>
+              <span class="nutriente">Energia rápida</span>
+            </div>
+            <p class="objetivo">Prepara o corpo para o exercício</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">20:00</div>
+          <div class="refeicao-content">
+            <h3>🏃‍♀️ Pós-treino</h3>
+            <div class="alimentos">
+              <span class="alimento">🥤 Shake de proteína</span>
+              <span class="alimento">🍓 Frutas vermelhas</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Proteína rápida</span>
+              <span class="nutriente">Antioxidantes</span>
+            </div>
+            <p class="objetivo">Recuperação muscular e reposição energética</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">21:00</div>
+          <div class="refeicao-content">
+            <h3>🌙 Jantar</h3>
+            <div class="alimentos">
+              <span class="alimento">🥚 Omelete com legumes</span>
+              <span class="alimento">🥗 Salada verde</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Proteína</span>
+              <span class="nutriente">Ferro</span>
+              <span class="nutriente">Fibras</span>
+            </div>
+            <p class="objetivo">Leve e nutritivo para o fim do dia</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card opcional">
+          <div class="horario-badge">22:30</div>
+          <div class="refeicao-content">
+            <h3>🌿 Ceia (opcional)</h3>
+            <div class="alimentos">
+              <span class="alimento">🍵 Chá de camomila</span>
+              <span class="alimento">🌰 Nozes</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Triptofano</span>
+              <span class="nutriente">Magnésio</span>
+              <span class="nutriente">Gorduras boas</span>
+            </div>
+            <p class="objetivo">Relaxamento e preparação para o sono</p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- Seção de Treinos Melhorada -->
     <section class="treino-section">
       <h2 class="treino-titulo">Treino de Peito</h2>
       <p class="treino-subtitulo">Segunda-Feira</p>
-      <div class="treino-card">
-        <img src="treino1.png" alt="Supino Reto com Barra" class="treino-img" />
-        <div class="treino-texto">
-          <h3>Supino Reto com Barra</h3>
-          <p><strong>Foco:</strong> Peitoral maior (porção média)</p>
-          <p><strong>Equipamento:</strong> Banco reto e barra</p>
-          <p><strong>Dica:</strong> Controle o movimento na descida.</p>
+      <div class="validation-field">
+        <p>Treino montado pelo profissional: <span>João</span></p>
+      </div>
+      
+      <!-- Mockup da interface de treinos -->
+      <div class="treino-mockup">
+        <h3>Como será apresentado no app</h3>
+        <div class="treino-interface-mockup">
+          <div class="treino-header-mockup">
+            <span class="treino-categoria">💪 Treino de Peito</span>
+            <span class="treino-duracao">~45 min</span>
+          </div>
+          <div class="exercicios-mockup">
+            <div class="exercicio-item-mockup">
+              <div class="exercicio-video-thumb"></div>
+              <div class="exercicio-info">
+                <h4>Supino Reto com Barra</h4>
+                <p>3 séries × 12 repetições</p>
+                <span class="exercicio-tag">Peitoral maior</span>
+              </div>
+            </div>
+            <div class="exercicio-item-mockup">
+              <div class="exercicio-video-thumb"></div>
+              <div class="exercicio-info">
+                <h4>Supino Inclinado</h4>
+                <p>3 séries × 10 repetições</p>
+                <span class="exercicio-tag">Peitoral superior</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="treino-card">
-        <div class="treino-texto">
-          <h3>Supino Inclinado com Halteres</h3>
-          <p><strong>Foco:</strong> Peitoral superior</p>
-          <p><strong>Equipamento:</strong> Banco inclinado e halteres</p>
-          <p><strong>Dica:</strong> Mantenha os cotovelos alinhados ao tronco.</p>
-        </div>
-        <img src="treino2.png" alt="Supino Inclinado" class="treino-img" />
-      </div>
-      <div class="treino-card">
-        <img src="treino3.png" alt="Crucifixo no Banco Reto" class="treino-img" />
-        <div class="treino-texto">
-          <h3>Crucifixo no Banco Reto</h3>
-          <p><strong>Foco:</strong> Abertura do peitoral</p>
-          <p><strong>Equipamento:</strong> Halteres</p>
-          <p><strong>Dica:</strong> Não junte totalmente os halteres no topo.</p>
-        </div>
-      </div>
-      <div class="treino-card">
-        <div class="treino-texto">
-          <h3>Crossover no Cabo (Polia Alta)</h3>
-          <p><strong>Foco:</strong> Definição e parte interna do peito</p>
-          <p><strong>Equipamento:</strong> Estação de polia</p>
-          <p><strong>Dica:</strong> Mantenha os braços semiflexionados.</p>
-        </div>
-        <img src="treino4.png" alt="Crossover no Cabo" class="treino-img" />
-      </div>
+
+
     </section>
   </section>
 
   <footer class="footer-completo">
     <div class="footer-container">
       <div class="footer-logo">
-        <img src="logo.png" alt="SparkTime Logo" />
+        <img src="logo.png" alt="SparkTime Logo" class="logo-img" />
         <p>SparkTime — preservando o seu tempo</p>
         <div class="social-icons">
           <img src="instagramlogo.png" alt="Instagram" />
@@ -212,15 +323,16 @@
     </div>
   </footer>
 
+  <!-- Script para inserção de vídeos -->
+  <script src="videos.js"></script>
+
   <!-- Chatbot -->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
       var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
       s1.async = true;
-      s1.src = '
-https://embed.tawk.to/684596640690ab1912a81521/1it7t6un5
-';
+      s1.src = 'https://embed.tawk.to/684596640690ab1912a81521/1it7t6un5';
       s1.charset = 'UTF-8';
       s1.setAttribute('crossorigin', '*');
       s0.parentNode.insertBefore(s1, s0);
