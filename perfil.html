@@ -28,63 +28,50 @@
       </div>
     </section>
 
-    <!-- Seção de Vídeos Melhorada -->
     <section class="videos-section">
-      <div class="quadro-branco">
-        <h2>Vídeos Educativos</h2>
-        <p class="videos-intro">
-          No SparkTime, acreditamos que cuidar da saúde não precisa ser complicado nem demorado. 
-          Por isso, desenvolvemos vídeos curtos e objetivos que se encaixam facilmente na rotina, 
-          mesmo nos dias mais corridos.
-        </p>
-        
-        <!-- Container para vídeos reais -->
-        <div class="videos-container" id="videos-container">
-          <!-- Os vídeos serão inseridos aqui via JavaScript -->
+    <h2>Vídeos Educativos</h2>
+    <div class="videos-grid">
+        <div class="video-card">
+            <div class="video-container">
+                <video class="video-player" poster="thumbnails/alongamento_matinal.jpg" preload="metadata">
+                    <source src="videos/alongamento/matinal.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="video-info">
+                <h3>Alongamento Matinal</h3>
+                <p>3 min • Flexibilidade</p>
+                <span class="video-description">Desperte seu corpo com movimentos suaves</span>
+            </div>
         </div>
         
-        <!-- Mockup da interface do app -->
-        <div class="app-mockup-section">
-          <h3>Como será no aplicativo SparkTime</h3>
-          <div class="mockup-container">
-            <div class="phone-mockup">
-              <div class="phone-screen">
-                <div class="app-header">
-                  <span class="app-title">SparkTime</span>
-                  <span class="user-greeting">Olá, Natália!</span>
+        <div class="video-card">
+            <div class="video-container">
+                <video class="video-player" poster="thumbnails/meditacao_5min.jpg" preload="metadata">
+                    <source src="videos/meditacao/5min.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="video-grid-mockup">
-                  <div class="video-item-mockup">
-                    <div class="video-thumbnail"></div>
-                    <span>Alongamento Matinal</span>
-                    <span class="duration">3 min</span>
-                  </div>
-                  <div class="video-item-mockup">
-                    <div class="video-thumbnail"></div>
-                    <span>Meditação Guiada</span>
-                    <span class="duration">5 min</span>
-                  </div>
-                  <div class="video-item-mockup">
-                    <div class="video-thumbnail"></div>
-                    <span>Dicas de Alimentação</span>
-                    <span class="duration">2 min</span>
-                  </div>
-                  <div class="video-item-mockup">
-                    <div class="video-thumbnail"></div>
-                    <span>Exercícios Rápidos</span>
-                    <span class="duration">4 min</span>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="mockup-description">
-              <h4>Interface Intuitiva</h4>
-              <p>Vídeos organizados por categoria, com duração clara e acesso rápido. A linguagem é acolhedora e motivacional, sempre respeitando seu ritmo e promovendo equilíbrio.</p>
+            <div class="video-info">
+                <h3>Meditação Guiada</h3>
+                <p>5 min • Mindfulness</p>
+                <span class="video-description">Encontre paz e equilíbrio interior</span>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
     <!-- Tabela de Alimentação Melhorada -->
     <section class="alimentacao-section">
