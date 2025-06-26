@@ -1858,3 +1858,27 @@ body {
 .tabela-tradicional tr:hover {
   background: #f8f9fa;
 }
+/* Estilos para os campos de validação de profissional */
+.validation-field {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #00d47e;
+}
+
+.validation-field p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.validation-field span {
+  color: #00d47e;
+  font-weight: bold;
+}
+
+
