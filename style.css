@@ -1963,3 +1963,60 @@ body {
   object-fit: cover; /* garante que o vídeo preencha o espaço */
 }
 
+.refeicao-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1rem;
+  color: #fff;
+  border-left: 4px solid #00ff9d;
+  box-shadow: 0 0 8px rgba(0, 255, 157, 0.2);
+  transition: transform 0.2s;
+}
+
+.refeicao-card:hover {
+  transform: translateY(-3px);
+}
+
+.refeicao-card.opcional {
+  border-left-color: #ffaa00;
+  box-shadow: 0 0 8px rgba(255, 170, 0, 0.2);
+}
+
+.horario-badge {
+  background-color: #00ff9d;
+  color: #000;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  float: right;
+}
+
+.refeicao-content .alimento {
+  display: inline-block;
+  background: #e8fef3;
+  color: #222;
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.refeicao-content .nutriente {
+  display: inline-block;
+  background: #dcefff;
+  color: #222;
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.refeicao-content .objetivo {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #666;
+  padding-top: 0.5rem;
+}
+
