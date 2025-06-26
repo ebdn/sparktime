@@ -1710,362 +1710,312 @@ body {
     color: #00d47e;
   }
 }
+/* Seção de Alimentação Melhorada */
+.alimentacao-section {
+  margin: 3rem 0;
+}
 
-/* Carousel de vídeos */
-.videos-carousel {
-  display: flex;
+.alimentacao-section h2 {
+  color: #00d47e;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dia-semana {
+  color: #666;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.alimentacao-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.refeicao-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #00d47e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.refeicao-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 212, 126, 0.15);
+}
+
+.refeicao-card.opcional {
+  border-left-color: #ffa500;
+  opacity: 0.9;
+}
+
+.horario-badge {
+  position: absolute;
+  top: -10px;
+  right: 1rem;
+  background: #00d47e;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.refeicao-card.opcional .horario-badge {
+  background: #ffa500;
+}
+
+.refeicao-content h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.alimentos {
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.video-card {
-  flex: 1 1 280px;
-  max-width: 300px;
-  background-color: #f5f5f5;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.alimento {
+  background: #e8f5e8;
+  color: #2d5a2d;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid #c8e6c8;
 }
 
-/* iframe dentro do card */
-.video-card iframe {
+.nutrientes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.nutriente {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid #bbdefb;
+}
+
+.objetivo {
+  color: #555;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* Tabela tradicional melhorada */
+.tabela-tradicional {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.tabela-tradicional h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tabela-tradicional table {
   width: 100%;
-  height: 180px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-tradicional th {
+  background: #00d47e;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tabela-tradicional td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.tabela-tradicional tr:hover {
+  background: #f8f9fa;
+}
+/* Estilos para os campos de validação de profissional */
+.validation-field {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid #00d47e;
+}
+
+.validation-field p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.validation-field span {
+  color: #00d47e;
+  font-weight: bold;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: none;
 }
 
-/* Correções de Proporções - Mantendo o Design Atual */
-
-/* Reset básico para garantir consistência */
-* {
-    box-sizing: border-box;
+.video-card {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* Container principal responsivo */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: inherit; /* Mantém a fonte atual */
-    line-height: 1.6;
+.videos-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
 }
 
-/* Navegação principal - correções de proporção */
-nav {
-    width: 100%;
-    padding: 0 clamp(1rem, 5vw, 2rem); /* Padding responsivo */
+.video-card {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  background: #f3f3f3;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-nav ul {
-    display: flex;
-    flex-wrap: wrap; /* Permite quebra em telas menores */
-    gap: clamp(0.5rem, 2vw, 1.5rem); /* Espaçamento fluido */
-    justify-content: center;
-    align-items: center;
+.video-card::before {
+  content: "";
+  display: block;
+  padding-top: 177.78%; /* 9:16 aspect ratio */
 }
 
-nav li {
-    flex-shrink: 0; /* Evita que os itens encolham demais */
+.video-card iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-nav a {
-    padding: clamp(0.5rem, 1.5vw, 1rem) clamp(0.75rem, 2vw, 1.5rem);
-    font-size: clamp(0.875rem, 2vw, 1rem); /* Tipografia fluida */
-    white-space: nowrap; /* Evita quebra de linha nos links */
+.video-card h4 {
+  margin: 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #fff;
+}
+.video-card {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 9 / 16;
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent; /* remove o cinza de fundo */
 }
 
-/* Header do perfil - proporções corrigidas */
-.profile-header,
-header {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: clamp(1rem, 4vw, 2rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(1rem, 3vw, 2rem);
+.video-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover; /* garante que o vídeo preencha o espaço */
 }
 
-/* Imagem de perfil responsiva */
-.profile-image,
-img[src*="profile"],
-img[alt*="perfil"] {
-    width: clamp(80px, 15vw, 120px); /* Tamanho fluido */
-    height: clamp(80px, 15vw, 120px);
-    border-radius: 50%;
-    object-fit: cover;
+.refeicao-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1rem;
+  color: #fff;
+  border-left: 4px solid #00ff9d;
+  box-shadow: 0 0 8px rgba(0, 255, 157, 0.2);
+  transition: transform 0.2s;
 }
 
-/* Nome do perfil */
-.profile-name,
-h1 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Tipografia fluida */
-    margin: 0;
-    text-align: center;
+.refeicao-card:hover {
+  transform: translateY(-3px);
 }
 
-/* Informações do perfil (idade, peso, altura) */
-.profile-info,
-.user-stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: clamp(0.5rem, 2vw, 1rem);
-    justify-content: center;
-    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+.refeicao-card.opcional {
+  border-left-color: #ffaa00;
+  box-shadow: 0 0 8px rgba(255, 170, 0, 0.2);
 }
 
-/* Seção de vídeos - grid responsivo */
-.videos-section,
-section:has(iframe),
-section:has(video) {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: clamp(1rem, 4vw, 2rem);
+.horario-badge {
+  background-color: #00ff9d;
+  color: #000;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  float: right;
 }
 
-/* Grid de vídeos responsivo */
-.videos-grid,
-.video-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: clamp(1rem, 3vw, 2rem);
-    width: 100%;
+.refeicao-content .alimento {
+  display: inline-block;
+  background: #e8fef3;
+  color: #222;
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  font-size: 0.9rem;
 }
 
-/* Cards de vídeo */
-.video-card,
-iframe,
-video {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9; /* Mantém proporção 16:9 */
-    border-radius: 8px;
-    overflow: hidden;
+.refeicao-content .nutriente {
+  display: inline-block;
+  background: #dcefff;
+  color: #222;
+  border-radius: 20px;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  font-size: 0.8rem;
 }
 
-/* Seções de conteúdo (dieta e treino) */
-.content-section,
-.diet-section,
-.workout-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: clamp(1rem, 4vw, 2rem);
+.refeicao-content .objetivo {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #666;
+  padding-top: 0.5rem;
 }
-
-/* Títulos de seção */
-h2 {
-    font-size: clamp(1.25rem, 4vw, 2rem);
-    margin-bottom: clamp(1rem, 3vw, 1.5rem);
-    text-align: center;
-}
-
-/* Cards de refeição e exercício */
-.meal-card,
-.exercise-card,
-.content-card {
-    width: 100%;
-    padding: clamp(0.75rem, 3vw, 1.5rem);
-    margin-bottom: clamp(0.75rem, 2vw, 1rem);
-    border-radius: 8px;
-    overflow-wrap: break-word; /* Quebra palavras longas */
-}
-
-/* Horários das refeições */
-.meal-time,
-.time {
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    font-weight: bold;
-    margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
-}
-
-/* Texto de conteúdo */
-p, 
-.meal-description,
-.exercise-description {
-    font-size: clamp(0.875rem, 2.5vw, 1rem);
-    line-height: 1.6;
-    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
-}
-
-/* Listas de alimentos e nutrientes */
-.food-list,
-.nutrient-list,
-ul, ol {
-    display: flex;
-    flex-wrap: wrap;
-    gap: clamp(0.25rem, 1vw, 0.5rem);
-    margin: clamp(0.5rem, 1.5vw, 0.75rem) 0;
-}
-
-.food-item,
-.nutrient-item,
-li {
-    font-size: clamp(0.75rem, 2vw, 0.875rem);
-    padding: clamp(0.25rem, 1vw, 0.5rem);
-    border-radius: 4px;
-    white-space: nowrap;
-}
-
-/* Media queries para ajustes específicos */
-
-/* Mobile (até 768px) */
-@media (max-width: 768px) {
-    .profile-header,
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .videos-grid,
-    .video-container {
-        grid-template-columns: 1fr; /* Uma coluna em mobile */
-    }
-    
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .profile-info,
-    .user-stats {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Tablet (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .videos-grid,
-    .video-container {
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas em tablet */
-    }
-    
-    .profile-header,
-    header {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-    }
-}
-
-/* Desktop (acima de 1024px) */
-@media (min-width: 1024px) {
-    .videos-grid,
-    .video-container {
-        grid-template-columns: repeat(3, 1fr); /* Três colunas em desktop */
-    }
-    
-    .content-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
-
-/* Correções para elementos específicos do site atual */
-
-/* Se houver uma seção branca específica */
-.white-section,
-section[style*="background"] {
-    padding: clamp(1rem, 4vw, 2rem);
-    margin: clamp(1rem, 3vw, 2rem) auto;
-    max-width: 1200px;
-    border-radius: 12px;
-}
-
-/* Texto descritivo */
-.description-text {
-    font-size: clamp(0.875rem, 2.5vw, 1rem);
-    line-height: 1.7;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto clamp(1rem, 3vw, 2rem);
-}
-
-/* Correções para imagens em geral */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Correções para tabelas se houver */
-table {
-    width: 100%;
-    overflow-x: auto;
-    display: block;
-    white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-    table {
-        font-size: 0.875rem;
-    }
-}
-
-/* Utilitários responsivos */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 clamp(1rem, 4vw, 2rem);
-}
-
-.text-center {
-    text-align: center;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.responsive-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: clamp(1rem, 3vw, 2rem);
-}
-
-/* Correções para elementos flutuantes */
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Garantir que nenhum elemento ultrapasse a largura da tela */
-* {
-    max-width: 100%;
-}
-
-/* Correções específicas para o layout atual */
-body > * {
-    width: 100%;
-}
-
-/* Melhorar a legibilidade em telas pequenas */
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-    
-    h1 {
-        font-size: 1.5rem;
-    }
-    
-    h2 {
-        font-size: 1.25rem;
-    }
-    
-    .meal-card,
-    .exercise-card {
-        padding: 0.75rem;
-    }
-}
-
-
