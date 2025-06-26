@@ -1710,3 +1710,151 @@ body {
     color: #00d47e;
   }
 }
+/* Seção de Alimentação Melhorada */
+.alimentacao-section {
+  margin: 3rem 0;
+}
+
+.alimentacao-section h2 {
+  color: #00d47e;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dia-semana {
+  color: #666;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.alimentacao-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.refeicao-card {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #00d47e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.refeicao-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 212, 126, 0.15);
+}
+
+.refeicao-card.opcional {
+  border-left-color: #ffa500;
+  opacity: 0.9;
+}
+
+.horario-badge {
+  position: absolute;
+  top: -10px;
+  right: 1rem;
+  background: #00d47e;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.refeicao-card.opcional .horario-badge {
+  background: #ffa500;
+}
+
+.refeicao-content h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.alimentos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alimento {
+  background: #e8f5e8;
+  color: #2d5a2d;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid #c8e6c8;
+}
+
+.nutrientes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.nutriente {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid #bbdefb;
+}
+
+.objetivo {
+  color: #555;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* Tabela tradicional melhorada */
+.tabela-tradicional {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.tabela-tradicional h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tabela-tradicional table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-tradicional th {
+  background: #00d47e;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.tabela-tradicional td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.tabela-tradicional tr:hover {
+  background: #f8f9fa;
+}
