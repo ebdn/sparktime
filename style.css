@@ -2098,55 +2098,5 @@ body {
   border-radius: 12px;
 }
 
-/* Container padrão para alinhar conteúdos */
-.container-centralizado {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
 
-/* Aplicar aos blocos principais */
-.videos-curtos,
-.alimentacao-section {
-  max-width: 1200px;
-  margin: 0 auto 3rem;
-  padding: 0 1rem;
-}
-
-/* Quadro branco */
-.quadro-branco {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-
-/* Responsividade para o carousel de vídeos e cards */
-.videos-carousel {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.video-card iframe {
-  width: 100%;
-  height: 230px;
-  border-radius: 12px;
-}
-
-.video-card {
-  width: 100%;
-  max-width: 300px;
-}
-
-/* Alinhar cards de alimentação em grid */
-.alimentacao-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-  padding: 0 1rem;
-}
 
