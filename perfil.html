@@ -31,79 +31,162 @@ perfil html
       </div>
     </section>
 
-    <section class="tabela-alimentacao">
-      <h2>Tabela de alimentação <span>Segunda-Feira &gt;</span></h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Horário</th>
-            <th>Refeição</th>
-            <th>Alimentos</th>
-            <th>Nutrientes</th>
-            <th>Objetivo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Horário">07:00</td>
-            <td data-label="Refeição">Café da manhã</td>
-            <td data-label="Alimentos">1 fatia de pão integral, 1 ovo mexido, 1 fatia de queijo branco, 1 copo de suco natural de laranja</td>
-            <td data-label="Nutrientes">Carboidrato, proteína, cálcio, vitamina C</td>
-            <td data-label="Objetivo">Energia para começar o dia; boa digestão e disposição</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">10:00</td>
-            <td data-label="Refeição">Lanche da manhã</td>
-            <td data-label="Alimentos">1 iogurte natural com chia + 1 banana</td>
-            <td data-label="Nutrientes">Probióticos, fibras, potássio, proteína leve</td>
-            <td data-label="Objetivo">Estabiliza o nível de glicose e saciedade até o almoço</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">12:30</td>
-            <td data-label="Refeição">Almoço</td>
-            <td data-label="Alimentos">1 filé de frango grelhado, arroz integral, feijão, salada verde com azeite e limão, cenoura ralada</td>
-            <td data-label="Nutrientes">Proteínas magras, fibras, ferro, antioxidantes</td>
-            <td data-label="Objetivo">Refeição completa com boa variedade nutricional</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">15:30</td>
-            <td data-label="Refeição">Lanche da tarde</td>
-            <td data-label="Alimentos">1 maçã + 1 colher de pasta de amendoim</td>
-            <td data-label="Nutrientes">Fibras, gordura boa, energia estável</td>
-            <td data-label="Objetivo">Ótima para o foco e controle da fome</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">18:30</td>
-            <td data-label="Refeição">Pré-treino</td>
-            <td data-label="Alimentos">1 fatia de pão integral + 1 colher de cottage + 1 colher de mel</td>
-            <td data-label="Nutrientes">Carboidratos complexos, proteína leve, energia rápida</td>
-            <td data-label="Objetivo">Prepara o corpo para o exercício sem pesar</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">20:00</td>
-            <td data-label="Refeição">Pós-treino</td>
-            <td data-label="Alimentos">1 shake de proteína (whey) + 1 fruta vermelha (morango ou framboesa)</td>
-            <td data-label="Nutrientes">Proteína de rápida absorção, antioxidantes</td>
-            <td data-label="Objetivo">Recuperação muscular e reposição energética</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">21:00</td>
-            <td data-label="Refeição">Jantar</td>
-            <td data-label="Alimentos">Omelete com legumes (espinafre, tomate, cebola), salada verde</td>
-            <td data-label="Nutrientes">Proteína, ferro, fibras, baixo teor calórico</td>
-            <td data-label="Objetivo">Leve e nutritivo para o fim do dia</td>
-          </tr>
-          <tr>
-            <td data-label="Horário">22:30</td>
-            <td data-label="Refeição">Ceia (opcional)</td>
-            <td data-label="Alimentos">Chá de camomila ou erva-doce + 2 nozes ou castanhas</td>
-            <td data-label="Nutrientes">Triptofano, magnésio, gorduras boas</td>
-            <td data-label="Objetivo">Relaxamento e preparação para o sono</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+    <!-- Tabela de Alimentação Melhorada -->
+    <section class="alimentacao-section">
+      <h2>Plano Alimentar <span class="dia-semana">Segunda-Feira</span></h2>
+      <div class="validation-field">
+        <p>Dieta elaborada pelo profissional: <span>Gabriel</span></p>
+      </div>
+      
+      <!-- Versão em cards para melhor visualização -->
+      <div class="alimentacao-cards">
+        <div class="refeicao-card">
+          <div class="horario-badge">07:00</div>
+          <div class="refeicao-content">
+            <h3>🌅 Café da manhã</h3>
+            <div class="alimentos">
+              <span class="alimento">🍞 Pão integral</span>
+              <span class="alimento">🥚 Ovo mexido</span>
+              <span class="alimento">🧀 Queijo branco</span>
+              <span class="alimento">🍊 Suco de laranja</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Carboidrato</span>
+              <span class="nutriente">Proteína</span>
+              <span class="nutriente">Cálcio</span>
+              <span class="nutriente">Vitamina C</span>
+            </div>
+            <p class="objetivo">Energia para começar o dia com disposição</p>
+          </div>
+        </div>
 
+        <div class="refeicao-card">
+          <div class="horario-badge">10:00</div>
+          <div class="refeicao-content">
+            <h3>🥤 Lanche da manhã</h3>
+            <div class="alimentos">
+              <span class="alimento">🥛 Iogurte natural com chia</span>
+              <span class="alimento">🍌 Banana</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Probióticos</span>
+              <span class="nutriente">Fibras</span>
+              <span class="nutriente">Potássio</span>
+            </div>
+            <p class="objetivo">Estabiliza glicose e mantém saciedade</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">12:30</div>
+          <div class="refeicao-content">
+            <h3>🍽️ Almoço</h3>
+            <div class="alimentos">
+              <span class="alimento">🍗 Frango grelhado</span>
+              <span class="alimento">🍚 Arroz integral</span>
+              <span class="alimento">🫘 Feijão</span>
+              <span class="alimento">🥗 Salada verde</span>
+              <span class="alimento">🥕 Cenoura ralada</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Proteínas</span>
+              <span class="nutriente">Fibras</span>
+              <span class="nutriente">Ferro</span>
+              <span class="nutriente">Antioxidantes</span>
+            </div>
+            <p class="objetivo">Refeição completa com variedade nutricional</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">15:30</div>
+          <div class="refeicao-content">
+            <h3>🍎 Lanche da tarde</h3>
+            <div class="alimentos">
+              <span class="alimento">🍎 Maçã</span>
+              <span class="alimento">🥜 Pasta de amendoim</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Fibras</span>
+              <span class="nutriente">Gorduras boas</span>
+              <span class="nutriente">Energia estável</span>
+            </div>
+            <p class="objetivo">Melhora o foco e controla a fome</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">18:30</div>
+          <div class="refeicao-content">
+            <h3>💪 Pré-treino</h3>
+            <div class="alimentos">
+              <span class="alimento">🍞 Pão integral</span>
+              <span class="alimento">🧀 Cottage</span>
+              <span class="alimento">🍯 Mel</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Carboidratos</span>
+              <span class="nutriente">Proteína leve</span>
+              <span class="nutriente">Energia rápida</span>
+            </div>
+            <p class="objetivo">Prepara o corpo para o exercício</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">20:00</div>
+          <div class="refeicao-content">
+            <h3>🏃‍♀️ Pós-treino</h3>
+            <div class="alimentos">
+              <span class="alimento">🥤 Shake de proteína</span>
+              <span class="alimento">🍓 Frutas vermelhas</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Proteína rápida</span>
+              <span class="nutriente">Antioxidantes</span>
+            </div>
+            <p class="objetivo">Recuperação muscular e reposição energética</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card">
+          <div class="horario-badge">21:00</div>
+          <div class="refeicao-content">
+            <h3>🌙 Jantar</h3>
+            <div class="alimentos">
+              <span class="alimento">🥚 Omelete com legumes</span>
+              <span class="alimento">🥗 Salada verde</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Proteína</span>
+              <span class="nutriente">Ferro</span>
+              <span class="nutriente">Fibras</span>
+            </div>
+            <p class="objetivo">Leve e nutritivo para o fim do dia</p>
+          </div>
+        </div>
+
+        <div class="refeicao-card opcional">
+          <div class="horario-badge">22:30</div>
+          <div class="refeicao-content">
+            <h3>🌿 Ceia (opcional)</h3>
+            <div class="alimentos">
+              <span class="alimento">🍵 Chá de camomila</span>
+              <span class="alimento">🌰 Nozes</span>
+            </div>
+            <div class="nutrientes">
+              <span class="nutriente">Triptofano</span>
+              <span class="nutriente">Magnésio</span>
+              <span class="nutriente">Gorduras boas</span>
+            </div>
+            <p class="objetivo">Relaxamento e preparação para o sono</p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    
     <section class="videos-curtos">
       <div class="quadro-branco">
         <h2>Vídeos curtos</h2>
