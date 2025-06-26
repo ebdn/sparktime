@@ -3,12 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Perfil | SparkTime</title>
+  <title>Perfil | SparkTime - Proporções Corrigidas</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="correcoes-proporcoes.css" />
+  <style>
+    /* Correções específicas adicionais para manter o design atual */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .logo-img {
+      height: clamp(40px, 8vw, 60px);
+      width: auto;
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: clamp(0.5rem, 2vw, 1.5rem);
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    .nav-menu a {
+      padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(0.75rem, 2vw, 1rem);
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .chamada-topo {
+      width: 100%;
+      padding: clamp(1rem, 4vw, 2rem);
+    }
+    
+    .perfil-top {
+      display: flex;
+      align-items: center;
+      gap: clamp(1rem, 3vw, 2rem);
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .avatar {
+      width: clamp(80px, 15vw, 120px);
+      height: clamp(80px, 15vw, 120px);
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .perfil-top h2 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin: 0 0 0.5rem 0;
+    }
+    
+    .perfil-top p {
+      font-size: clamp(0.875rem, 2.5vw, 1.1rem) !important;
+      margin: 0;
+    }
+    
+    .videos-curtos {
+      width: 100%;
+      max-width: 1200px;
+      margin: clamp(2rem, 5vw, 4rem) auto;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+    }
+    
+    .quadro-branco {
+      background: white;
+      border-radius: 12px;
+      padding: clamp(1.5rem, 4vw, 3rem);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .quadro-branco h2 {
+      text-align: center;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: clamp(1.5rem, 4vw, 2rem);
+      color: #333;
+    }
+    
+    .videos-carousel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: clamp(1rem, 3vw, 2rem);
+      margin-bottom: clamp(1.5rem, 4vw, 2rem);
+    }
+    
+    .video-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .video-card iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    .texto-verde {
+      color: #00ff88;
+      text-align: center;
+      font-size: clamp(0.875rem, 2.5vw, 1rem);
+      line-height: 1.6;
+      margin: clamp(1rem, 3vw, 2rem) 0;
+    }
+    
+    .texto-verde br {
+      display: none;
+    }
+    
+    /* Seções de dieta e treino */
+    .dieta-section,
+    .treino-section {
+      width: 100%;
+      max-width: 1200px;
+      margin: clamp(2rem, 5vw, 4rem) auto;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+    }
+    
+    .dieta-section h2,
+    .treino-section h2 {
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+      margin-bottom: clamp(1rem, 3vw, 1.5rem);
+      text-align: center;
+    }
+    
+    .refeicao,
+    .exercicio {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: clamp(1rem, 3vw, 1.5rem);
+      margin-bottom: clamp(0.75rem, 2vw, 1rem);
+      border-left: 4px solid #00ff88;
+    }
+    
+    .horario {
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      font-weight: bold;
+      color: #00ff88;
+      margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+    }
+    
+    .alimentos,
+    .nutrientes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(0.25rem, 1vw, 0.5rem);
+      margin: clamp(0.5rem, 1.5vw, 0.75rem) 0;
+    }
+    
+    .alimento,
+    .nutriente {
+      background: #e9ecef;
+      padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.5rem, 1.5vw, 0.75rem);
+      border-radius: 4px;
+      font-size: clamp(0.75rem, 2vw, 0.875rem);
+    }
+    
+    .beneficio,
+    .dica {
+      font-style: italic;
+      color: #666;
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      margin-top: clamp(0.5rem, 1.5vw, 0.75rem);
+    }
+    
+    /* Media queries específicas */
+    @media (max-width: 768px) {
+      .main-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .nav-menu {
+        justify-content: center;
+      }
+      
+      .perfil-top {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .videos-carousel {
+        grid-template-columns: 1fr;
+      }
+      
+      .texto-verde br {
+        display: block;
+      }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .videos-carousel {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .videos-carousel {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    /* Garantir que nenhum elemento ultrapasse a tela */
+    * {
+      max-width: 100%;
+    }
+    
+    /* Melhorar a responsividade de imagens */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Container geral */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+  </style>
 </head>
 <body>
   <header class="main-header">
-    <img src="logo.png" alt="SparkTime Logo" class="logo-img" />
+    <img src="https://ebdn.github.io/sparktime/logo.png" alt="SparkTime Logo" class="logo-img" />
     <nav class="nav-menu">
       <a href="home.html">Início</a>
       <a href="quemsomos.html">Quem somos</a>
@@ -20,295 +250,199 @@
 
   <section class="chamada-topo">
     <section class="perfil-top">
-      <img src="imgperfil.png" alt="Natália Souza" class="avatar" />
+      <img src="https://ebdn.github.io/sparktime/imgperfil.png" alt="Natália Souza" class="avatar" />
       <div>
         <h2>Natália Souza</h2>
         <p style="font-size: 1.1rem;">25 anos • 62kg • 1.60m</p>
       </div>
     </section>
-
-        </section>
-
-      <!-- Tabela de Vídeos Curtos -->
-    <section class="videos-curtos">
-      <div class="quadro-branco">
-        <h2>Vídeos curtos</h2>
-        <div class="videos-carousel">
-          <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/5lIoxkIIUGE" title="Vídeo 1" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/jtbx_crztb0" title="Vídeo 1" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/U0wsE5ThraA" title="Vídeo 1" frameborder="0" allowfullscreen></iframe>
-          </div>
-        </div>
-        <p class="texto-verde">
-          No Sparktime, acreditamos que cuidar da saúde não precisa ser complicado nem demorado.<br />
-          Por isso, desenvolvemos vídeos curtos e objetivos que se encaixam facilmente na rotina,<br />
-          mesmo nos dias mais corridos.
-        </p>
-        <p class="texto-descricao">
-          Cada conteúdo foi pensado para entregar informação de qualidade, prática imediata e<br />
-          motivação real, em menos de 5 minutos. Aqui, o tempo é seu aliado — seja para se alongar,<br />
-          aprender algo novo sobre alimentação ou simplesmente respirar melhor com uma meditação guiada.
-        </p>
-      </div>
-    </section>
-
-    <!-- Tabela de Alimentação Melhorada -->
-    <section class="alimentacao-section">
-      <h2>Plano Alimentar <span class="dia-semana">Segunda-Feira</span></h2>
-      <div class="validation-field">
-        <p>Dieta elaborada pelo profissional: <span>Gabriel</span></p>
-      </div>
-      
-      <!-- Versão em cards para melhor visualização -->
-      <div class="alimentacao-cards">
-        <div class="refeicao-card">
-          <div class="horario-badge">07:00</div>
-          <div class="refeicao-content">
-            <h3>🌅 Café da manhã</h3>
-            <div class="alimentos">
-              <span class="alimento">🍞 Pão integral</span>
-              <span class="alimento">🥚 Ovo mexido</span>
-              <span class="alimento">🧀 Queijo branco</span>
-              <span class="alimento">🍊 Suco de laranja</span>
-            </div>
-            <div class="nutrientes">
-              <span class="nutriente">Carboidrato</span>
-              <span class="nutriente">Proteína</span>
-              <span class="nutriente">Cálcio</span>
-              <span class="nutriente">Vitamina C</span>
-            </div>
-            <p class="objetivo">Energia para começar o dia com disposição</p>
-          </div>
-        </div>
-
-        <div class="refeicao-card">
-          <div class="horario-badge">10:00</div>
-          <div class="refeicao-content">
-            <h3>🥤 Lanche da manhã</h3>
-            <div class="alimentos">
-              <span class="alimento">🥛 Iogurte natural com chia</span>
-              <span class="alimento">🍌 Banana</span>
-            </div>
-            <div class="nutrientes">
-              <span class="nutriente">Probióticos</span>
-              <span class="nutriente">Fibras</span>
-              <span class="nutriente">Potássio</span>
-            </div>
-            <p class="objetivo">Estabiliza glicose e mantém saciedade</p>
-          </div>
-        </div>
-
-        <div class="refeicao-card">
-          <div class="horario-badge">12:30</div>
-          <div class="refeicao-content">
-            <h3>🍽️ Almoço</h3>
-            <div class="alimentos">
-              <span class="alimento">🍗 Frango grelhado</span>
-              <span class="alimento">🍚 Arroz integral</span>
-              <span class="alimento">🫘 Feijão</span>
-              <span class="alimento">🥗 Salada verde</span>
-              <span class="alimento">🥕 Cenoura ralada</span>
-            </div>
-            <div class="nutrientes">
-              <span class="nutriente">Proteínas</span>
-              <span class="nutriente">Fibras</span>
-              <span class="nutriente">Ferro</span>
-              <span class="nutriente">Antioxidantes</span>
-            </div>
-            <p class="objetivo">Refeição completa com variedade nutricional</p>
-          </div>
-        </div>
-
-        <div class="refeicao-card">
-          <div class="horario-badge">15:30</div>
-          <div class="refeicao-content">
-            <h3>🍎 Lanche da tarde</h3>
-            <div class="alimentos">
-              <span class="alimento">🍎 Maçã</span>
-              <span class="alimento">🥜 Pasta de amendoim</span>
-            </div>
-            <div class="nutrientes">
-              <span class="nutriente">Fibras</span>
-              <span class="nutriente">Gorduras boas</span>
-              <span class="nutriente">Energia estável</span>
-            </div>
-            <p class="objetivo">Melhora o foco e controla a fome</p>
-          </div>
-        </div>
-
-        <div class="refeicao-card">
-          <div class="horario-badge">18:30</div>
-          <div class="refeicao-content">
-            <h3>💪 Pré-treino</h3>
-            <div class="alimentos">
-              <span class="alimento">🍞 Pão integral</span>
-              <span class="alimento">🧀 Cottage</span>
-              <span class="alimento">🍯 Mel</span>
-            </div>
-            <div class="nutrientes">
-              <span class="nutriente">Carboidratos</span>
-              <span class="nutriente">Proteína leve</span>
-              <span class="nutriente">Energia rápida</span>
-            </div>
-            <p class="objetivo">Prepara o corpo para o exercício</p>
-          </div>
-        </div>
-
-        <div class="refeicao-card">
-          <div class="horario-badge">20:00</div>
-          <div class="refeicao-content">
-            <h3>🏃‍♀️ Pós-treino</h3>
-            <div class="alimentos">
-              <span class="alimento">🥤 Shake de proteína</span>
-              <span class="alimento">🍓 Frutas vermelhas</span>
-            </div>
-            <div class="nutrientes">
-              <span class="nutriente">Proteína rápida</span>
-              <span class="nutriente">Antioxidantes</span>
-            </div>
-            <p class="objetivo">Recuperação muscular e reposição energética</p>
-          </div>
-        </div>
-
-        <div class="refeicao-card">
-          <div class="horario-badge">21:00</div>
-          <div class="refeicao-content">
-            <h3>🌙 Jantar</h3>
-            <div class="alimentos">
-              <span class="alimento">🥚 Omelete com legumes</span>
-              <span class="alimento">🥗 Salada verde</span>
-            </div>
-            <div class="nutrientes">
-              <span class="nutriente">Proteína</span>
-              <span class="nutriente">Ferro</span>
-              <span class="nutriente">Fibras</span>
-            </div>
-            <p class="objetivo">Leve e nutritivo para o fim do dia</p>
-          </div>
-        </div>
-
-        <div class="refeicao-card opcional">
-          <div class="horario-badge">22:30</div>
-          <div class="refeicao-content">
-            <h3>🌿 Ceia (opcional)</h3>
-            <div class="alimentos">
-              <span class="alimento">🍵 Chá de camomila</span>
-              <span class="alimento">🌰 Nozes</span>
-            </div>
-            <div class="nutrientes">
-              <span class="nutriente">Triptofano</span>
-              <span class="nutriente">Magnésio</span>
-              <span class="nutriente">Gorduras boas</span>
-            </div>
-            <p class="objetivo">Relaxamento e preparação para o sono</p>
-          </div>
-        </div>
-      </div>
-
-
-
-
-     <!-- Seção de Treinos Melhorada -->
-          <section class="alimentacao-section">
-      <h2>Plano de Treino <span class="dia-semana">Segunda-Feira</span></h2>
-      <div class="validation-field">
-        <p>Treino elaborado pelo profissional: <span>João</span></p>
-      </div>
-      <div class="treino-card">
-        <img src="treino1.png" alt="Supino Reto com Barra" class="treino-img" />
-        <div class="treino-texto">
-          <h3>Supino Reto com Barra</h3>
-          <p><strong>Foco:</strong> Peitoral maior (porção média)</p>
-          <p><strong>Equipamento:</strong> Banco reto e barra</p>
-          <p><strong>Dica:</strong> Controle o movimento na descida.</p>
-        </div>
-      </div>
-      <div class="treino-card">
-        <div class="treino-texto">
-          <h3>Supino Inclinado com Halteres</h3>
-          <p><strong>Foco:</strong> Peitoral superior</p>
-          <p><strong>Equipamento:</strong> Banco inclinado e halteres</p>
-          <p><strong>Dica:</strong> Mantenha os cotovelos alinhados ao tronco.</p>
-        </div>
-        <img src="treino2.png" alt="Supino Inclinado" class="treino-img" />
-      </div>
-      <div class="treino-card">
-        <img src="treino3.png" alt="Crucifixo no Banco Reto" class="treino-img" />
-        <div class="treino-texto">
-          <h3>Crucifixo no Banco Reto</h3>
-          <p><strong>Foco:</strong> Abertura do peitoral</p>
-          <p><strong>Equipamento:</strong> Halteres</p>
-          <p><strong>Dica:</strong> Não junte totalmente os halteres no topo.</p>
-        </div>
-      </div>
-      <div class="treino-card">
-        <div class="treino-texto">
-          <h3>Crossover no Cabo (Polia Alta)</h3>
-          <p><strong>Foco:</strong> Definição e parte interna do peito</p>
-          <p><strong>Equipamento:</strong> Estação de polia</p>
-          <p><strong>Dica:</strong> Mantenha os braços semiflexionados.</p>
-        </div>
-        <img src="treino4.png" alt="Crossover no Cabo" class="treino-img" />
-      </div>
-    </section>
   </section>
 
-  <footer class="footer-completo">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="logo.png" alt="SparkTime Logo" />
-        <p>SparkTime — preservando o seu tempo</p>
-        <div class="social-icons">
-          <img src="instagramlogo.png" alt="Instagram" />
-          <img src="tiktoklogo.png" alt="TikTok" />
-          <img src="linkedinlogo.png" alt="LinkedIn" />
+  <!-- Seção de Vídeos Curtos -->
+  <section class="videos-curtos">
+    <div class="quadro-branco">
+      <h2>Vídeos curtos</h2>
+      <div class="videos-carousel">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/5lIoxkIIUGE" title="Macronutrientes" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/jtbx_crztb0" title="Falha" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/U0wsE5ThraA" title="Insulina" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="footer-links">
-        <ul>
-          <li><strong>Sobre a ST</strong></li>
-          <li><a href="#">Quem somos</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Ajuda</a></li>
-        </ul>
-        <ul>
-          <li><strong>Empresas</strong></li>
-          <li><a href="#">Colaboradores</a></li>
-          <li><a href="#">Planos</a></li>
-        </ul>
-      </div>
-      <div class="footer-apps">
-        <p>Baixe nosso aplicativo</p>
-        <div class="app-buttons">
-          <img src="appstorelogo.png" alt="App Store" />
-          <img src="googleplaylogo.png" alt="Google Play" />
-        </div>
-      </div>
+      <p class="texto-verde">
+        No Sparktime, acreditamos que cuidar da saúde não precisa ser complicado nem demorado.<br />
+        Por isso, desenvolvemos vídeos curtos e objetivos que se encaixam facilmente na rotina,<br />
+        mesmo nos dias mais corridos.
+      </p>
+      <p style="text-align: center; color: #666; font-size: clamp(0.875rem, 2.5vw, 1rem); line-height: 1.6;">
+        Cada conteúdo foi pensado para entregar informação de qualidade, prática imediata e
+        motivação real, em menos de 5 minutos. Aqui, o tempo é seu aliado — seja para se alongar,
+        aprender algo novo sobre alimentação ou simplesmente respirar melhor com uma meditação guiada.
+      </p>
     </div>
-    <div class="footer-bottom">
-      <a href="#">Termos de uso</a>
-      <a href="#">Aviso de Privacidade</a>
-      <a href="#">Portal de Privacidade</a>
-      <a href="#">Transparência salarial e critérios</a>
-    </div>
-  </footer>
+  </section>
 
-  <!-- Chatbot -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/684596640690ab1912a81521/1it7t6un5';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
+  <!-- Seção de Dieta -->
+  <section class="dieta-section">
+    <h2>Dieta elaborada pelo profissional: Gabriel</h2>
+    
+    <div class="refeicao">
+      <div class="horario">07:00</div>
+      <div class="alimentos">
+        <span class="alimento">🍞 Pão integral</span>
+        <span class="alimento">🥚 Ovo mexido</span>
+        <span class="alimento">🧀 Queijo branco</span>
+        <span class="alimento">🍊 Suco de laranja</span>
+      </div>
+      <div class="nutrientes">
+        <span class="nutriente">Carboidrato</span>
+        <span class="nutriente">Proteína</span>
+        <span class="nutriente">Cálcio</span>
+        <span class="nutriente">Vitamina C</span>
+      </div>
+      <div class="beneficio">Energia para começar o dia com disposição</div>
+    </div>
+
+    <div class="refeicao">
+      <div class="horario">10:00</div>
+      <div class="alimentos">
+        <span class="alimento">🥛 Iogurte natural com chia</span>
+        <span class="alimento">🍌 Banana</span>
+      </div>
+      <div class="nutrientes">
+        <span class="nutriente">Probióticos</span>
+        <span class="nutriente">Fibras</span>
+        <span class="nutriente">Potássio</span>
+      </div>
+      <div class="beneficio">Estabiliza glicose e mantém saciedade</div>
+    </div>
+
+    <div class="refeicao">
+      <div class="horario">12:30</div>
+      <div class="alimentos">
+        <span class="alimento">🍗 Frango grelhado</span>
+        <span class="alimento">🍚 Arroz integral</span>
+        <span class="alimento">🫘 Feijão</span>
+        <span class="alimento">🥗 Salada verde</span>
+        <span class="alimento">🥕 Cenoura ralada</span>
+      </div>
+      <div class="nutrientes">
+        <span class="nutriente">Proteínas</span>
+        <span class="nutriente">Fibras</span>
+        <span class="nutriente">Ferro</span>
+        <span class="nutriente">Antioxidantes</span>
+      </div>
+      <div class="beneficio">Refeição completa com variedade nutricional</div>
+    </div>
+
+    <div class="refeicao">
+      <div class="horario">15:30</div>
+      <div class="alimentos">
+        <span class="alimento">🍎 Maçã</span>
+        <span class="alimento">🥜 Pasta de amendoim</span>
+      </div>
+      <div class="nutrientes">
+        <span class="nutriente">Fibras</span>
+        <span class="nutriente">Gorduras boas</span>
+        <span class="nutriente">Energia estável</span>
+      </div>
+      <div class="beneficio">Melhora o foco e controla a fome</div>
+    </div>
+
+    <div class="refeicao">
+      <div class="horario">18:30</div>
+      <div class="alimentos">
+        <span class="alimento">🍞 Pão integral</span>
+        <span class="alimento">🧀 Cottage</span>
+        <span class="alimento">🍯 Mel</span>
+      </div>
+      <div class="nutrientes">
+        <span class="nutriente">Carboidratos</span>
+        <span class="nutriente">Proteína leve</span>
+        <span class="nutriente">Energia rápida</span>
+      </div>
+      <div class="beneficio">Prepara o corpo para o exercício</div>
+    </div>
+
+    <div class="refeicao">
+      <div class="horario">20:00</div>
+      <div class="alimentos">
+        <span class="alimento">🥤 Shake de proteína</span>
+        <span class="alimento">🍓 Frutas vermelhas</span>
+      </div>
+      <div class="nutrientes">
+        <span class="nutriente">Proteína rápida</span>
+        <span class="nutriente">Antioxidantes</span>
+      </div>
+      <div class="beneficio">Recuperação muscular e reposição energética</div>
+    </div>
+
+    <div class="refeicao">
+      <div class="horario">21:00</div>
+      <div class="alimentos">
+        <span class="alimento">🥚 Omelete com legumes</span>
+        <span class="alimento">🥗 Salada verde</span>
+      </div>
+      <div class="nutrientes">
+        <span class="nutriente">Proteína</span>
+        <span class="nutriente">Ferro</span>
+        <span class="nutriente">Fibras</span>
+      </div>
+      <div class="beneficio">Leve e nutritivo para o fim do dia</div>
+    </div>
+
+    <div class="refeicao">
+      <div class="horario">22:30</div>
+      <div class="alimentos">
+        <span class="alimento">🍵 Chá de camomila</span>
+        <span class="alimento">🌰 Nozes</span>
+      </div>
+      <div class="nutrientes">
+        <span class="nutriente">Triptofano</span>
+        <span class="nutriente">Magnésio</span>
+        <span class="nutriente">Gorduras boas</span>
+      </div>
+      <div class="beneficio">Relaxamento e preparação para o sono</div>
+    </div>
+  </section>
+
+  <!-- Seção de Treino -->
+  <section class="treino-section">
+    <h2>Treino elaborado pelo profissional: João</h2>
+    
+    <div class="exercicio">
+      <h3>Supino Reto</h3>
+      <p><strong>Foco:</strong> Peitoral maior (porção média)</p>
+      <p><strong>Equipamento:</strong> Banco reto e barra</p>
+      <div class="dica"><strong>Dica:</strong> Controle o movimento na descida.</div>
+    </div>
+
+    <div class="exercicio">
+      <h3>Supino Inclinado</h3>
+      <p><strong>Foco:</strong> Peitoral superior</p>
+      <p><strong>Equipamento:</strong> Banco inclinado e halteres</p>
+      <div class="dica"><strong>Dica:</strong> Mantenha os cotovelos alinhados ao tronco.</div>
+    </div>
+
+    <div class="exercicio">
+      <h3>Crucifixo</h3>
+      <p><strong>Foco:</strong> Abertura do peitoral</p>
+      <p><strong>Equipamento:</strong> Halteres</p>
+      <div class="dica"><strong>Dica:</strong> Não junte totalmente os halteres no topo.</div>
+    </div>
+
+    <div class="exercicio">
+      <h3>Cross Over</h3>
+      <p><strong>Foco:</strong> Definição e parte interna do peito</p>
+      <p><strong>Equipamento:</strong> Estação de polia</p>
+      <div class="dica"><strong>Dica:</strong> Mantenha os braços semiflexionados.</div>
+    </div>
+  </section>
+
 </body>
 </html>
+
