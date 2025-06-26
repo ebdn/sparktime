@@ -1735,4 +1735,337 @@ body {
   border: none;
 }
 
+/* Correções de Proporções - Mantendo o Design Atual */
+
+/* Reset básico para garantir consistência */
+* {
+    box-sizing: border-box;
+}
+
+/* Container principal responsivo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: inherit; /* Mantém a fonte atual */
+    line-height: 1.6;
+}
+
+/* Navegação principal - correções de proporção */
+nav {
+    width: 100%;
+    padding: 0 clamp(1rem, 5vw, 2rem); /* Padding responsivo */
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    gap: clamp(0.5rem, 2vw, 1.5rem); /* Espaçamento fluido */
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    flex-shrink: 0; /* Evita que os itens encolham demais */
+}
+
+nav a {
+    padding: clamp(0.5rem, 1.5vw, 1rem) clamp(0.75rem, 2vw, 1.5rem);
+    font-size: clamp(0.875rem, 2vw, 1rem); /* Tipografia fluida */
+    white-space: nowrap; /* Evita quebra de linha nos links */
+}
+
+/* Header do perfil - proporções corrigidas */
+.profile-header,
+header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+/* Imagem de perfil responsiva */
+.profile-image,
+img[src*="profile"],
+img[alt*="perfil"] {
+    width: clamp(80px, 15vw, 120px); /* Tamanho fluido */
+    height: clamp(80px, 15vw, 120px);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Nome do perfil */
+.profile-name,
+h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Tipografia fluida */
+    margin: 0;
+    text-align: center;
+}
+
+/* Informações do perfil (idade, peso, altura) */
+.profile-info,
+.user-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    justify-content: center;
+    font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+}
+
+/* Seção de vídeos - grid responsivo */
+.videos-section,
+section:has(iframe),
+section:has(video) {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 2rem);
+}
+
+/* Grid de vídeos responsivo */
+.videos-grid,
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    width: 100%;
+}
+
+/* Cards de vídeo */
+.video-card,
+iframe,
+video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* Mantém proporção 16:9 */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Seções de conteúdo (dieta e treino) */
+.content-section,
+.diet-section,
+.workout-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 2rem);
+}
+
+/* Títulos de seção */
+h2 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    text-align: center;
+}
+
+/* Cards de refeição e exercício */
+.meal-card,
+.exercise-card,
+.content-card {
+    width: 100%;
+    padding: clamp(0.75rem, 3vw, 1.5rem);
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
+    border-radius: 8px;
+    overflow-wrap: break-word; /* Quebra palavras longas */
+}
+
+/* Horários das refeições */
+.meal-time,
+.time {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    font-weight: bold;
+    margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+}
+
+/* Texto de conteúdo */
+p, 
+.meal-description,
+.exercise-description {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.6;
+    margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+/* Listas de alimentos e nutrientes */
+.food-list,
+.nutrient-list,
+ul, ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.25rem, 1vw, 0.5rem);
+    margin: clamp(0.5rem, 1.5vw, 0.75rem) 0;
+}
+
+.food-item,
+.nutrient-item,
+li {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    padding: clamp(0.25rem, 1vw, 0.5rem);
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+/* Media queries para ajustes específicos */
+
+/* Mobile (até 768px) */
+@media (max-width: 768px) {
+    .profile-header,
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .videos-grid,
+    .video-container {
+        grid-template-columns: 1fr; /* Uma coluna em mobile */
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .profile-info,
+    .user-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .videos-grid,
+    .video-container {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em tablet */
+    }
+    
+    .profile-header,
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+/* Desktop (acima de 1024px) */
+@media (min-width: 1024px) {
+    .videos-grid,
+    .video-container {
+        grid-template-columns: repeat(3, 1fr); /* Três colunas em desktop */
+    }
+    
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Correções para elementos específicos do site atual */
+
+/* Se houver uma seção branca específica */
+.white-section,
+section[style*="background"] {
+    padding: clamp(1rem, 4vw, 2rem);
+    margin: clamp(1rem, 3vw, 2rem) auto;
+    max-width: 1200px;
+    border-radius: 12px;
+}
+
+/* Texto descritivo */
+.description-text {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.7;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto clamp(1rem, 3vw, 2rem);
+}
+
+/* Correções para imagens em geral */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Correções para tabelas se houver */
+table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.875rem;
+    }
+}
+
+/* Utilitários responsivos */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+/* Correções para elementos flutuantes */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Garantir que nenhum elemento ultrapasse a largura da tela */
+* {
+    max-width: 100%;
+}
+
+/* Correções específicas para o layout atual */
+body > * {
+    width: 100%;
+}
+
+/* Melhorar a legibilidade em telas pequenas */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.25rem;
+    }
+    
+    .meal-card,
+    .exercise-card {
+        padding: 0.75rem;
+    }
+}
+
 
